@@ -1,0 +1,23 @@
+
+
+// Vendorization
+// Prefixes
+$vendor-prefixes: (
+  '-moz-',
+  '-webkit-',
+  '-o-',
+  ''
+);
+
+
+// Vendorization
+// Properties
+$vendor-properties: (
+  'transform',
+  'background-size',
+  'box-shadow',
+  'border-radius',
+  'animation-fill-mode',
+  'animation-duration',
+  'animation-name'
+);

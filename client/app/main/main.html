@@ -1,0 +1,152 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+
+<!-- INTRODUCTION -->
+<!-- ================================================ -->
+<div class="bg-intro" id="home">
+  <div class="layer-intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="index-icon center-block"></div>
+          <h1 class="text-center">WILLKOMMEN</h1>
+          <h2 class="text-center"> Naturheilpraxis Gabriele Schwartz </h2>
+          <!-- Horizontale Trennline Adresse -->
+          <div class="hline center-block"/>
+          <p class="text-center">Wingertweg 83 75228 Ispringen +49 7231 800126</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bild & Text     // Hintergrundbild? Schriftart? -->
+
+<!-- PORTFOLIO-->
+<!--===============================================================-->
+<div class="bg-portfolio" id="praxis">
+  <div class="container">
+    <h1 class="text-center">PRAXIS</h1>
+    <div class="row row-portfolio">
+      <div class="col-sm-4 margin-bottom-xs">
+        <a class="lightbox wrapper-portfolio" href="../assets/images/Blume-small.jpg">
+          <img class="img-responsive" src="../assets/images/Blume-small.jpg" alt="portfolio-1">
+          <h3 class="category">Konzepte</h3>
+        </a>
+      </div>
+      <div class="col-sm-4 margin-bottom-xs">
+        <a class="lightbox wrapper-portfolio" href="../assets/images/globuli.jpg">
+          <img class="img-responsive" src="../assets/images/globuli.jpg" alt="portfolio-2">
+          <h3 class="category">Kurse</h3>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a class="lightbox wrapper-portfolio" ng-href="../assets/images/roof-small.jpg">
+          <img class="img-responsive" src="../assets/images/roof-small.jpg" alt="portfolio-3">
+          <h3 class="category">Bilder</h3>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- NEWS -->
+<!-- ================================================ -->
+
+<div class="bg-news" id="news">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">NEUIGKEITEN</h1>
+      <div class="col-sm-12">
+        <div class="news-post" ng-repeat="post in posts | limitTo:numPosts">
+          <div class="news-post-header">
+            <span class="panel-title"> {{ post.title }}</span> <span class="pull-right"> {{ post.date | date:'dd.MM.yyyy' }}</span>
+          </div>
+          <div class="news-post-body">
+            <pre>{{ post.body }}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<!-- KONZEPT -->
+<!-- ================================================ -->
+<div class="bg-concept" id="concept">
+  <div class="layer-concept">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center">KONZEPT</h1>
+        <div class="col-lg-5">
+          <p class="text-center concept-quote">Ich sehe den Mensch als ein Ganzes, eine Einheit.<br>
+            Sie werden nicht auf Ihre Krankheitssymptome reduziert, sondern erhalten eine ausführliche Beratung mit unterschiedlichen Therapievorschlägen.
+            Mein Ziel ist es ihre Gesundheit wieder herzustellen und dauerhaft zu erhalten.</p>
+        </div>
+        <div class="col-lg-5">
+          <img class="img-concept" src="../assets/images/florence.jpg" alt="Kathedrale Florenz">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THERAPIE -->
+<!-- ================================================ -->
+
+<!-- KURSE -->
+<!-- ================================================ -->
+
+<!-- BILDERGALERIE -->
+<!-- ================================================ -->
+
+<!-- ANFAHRT -->
+<!-- ================================================ -->
+
+<!-- KOSTEN -->
+<!-- ================================================ -->
+
+<!-- IMPRESSUM -->
+<!-- ================================================ -->
+
+
+<!--<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="post in posts">
+        <li><a href="#" tooltip="{{post.date}}">{{post.title}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div> -->
+
+<footer class="footer">
+  <div class="container">
+    <p>Naturheilpraxis Gabriele Schwartz 2015 | Dennis Schwartz Webdesign |
+      <a href="http://github.com/DennisSchwartz">GitHub</a> |
+      <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Contact</a></p>
+  </div>
+</footer>

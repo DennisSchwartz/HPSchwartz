@@ -3,8 +3,8 @@
 
 <!-- INTRODUCTION -->
 <!-- ================================================ -->
-<div class="bg-intro" id="home">
-  <div class="layer-intro">
+<div class="intro" id="home">
+  <div class="layer">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -19,34 +19,31 @@
     </div>
   </div>
 </div>
-<!-- Bild & Text     // Hintergrundbild? Schriftart? -->
 
 <!-- PORTFOLIO-->
 <!--===============================================================-->
-<div class="bg-portfolio" id="praxis">
+<div class="portfolio" id="praxis">
   <div class="container">
-    <h1 class="text-center">PRAXIS</h1>
-    <div class="row row-portfolio">
-      <div class="col-sm-4 margin-bottom-xs">
-        <a class="lightbox wrapper-portfolio" href="../assets/images/Blume-small.jpg">
+    <div class="row">
+      <div class="col-md-4 margin-bottom-xs">
+        <a class="lightbox wrapper" href="#concept">
           <img class="img-responsive" src="../assets/images/Blume-small.jpg" alt="portfolio-1">
           <h3 class="category">Konzepte</h3>
         </a>
       </div>
-      <div class="col-sm-4 margin-bottom-xs">
-        <a class="lightbox wrapper-portfolio" href="../assets/images/globuli.jpg">
+      <div class="col-md-4 margin-bottom-xs">
+        <a class="lightbox wrapper" href="../assets/images/globuli.jpg">
           <img class="img-responsive" src="../assets/images/globuli.jpg" alt="portfolio-2">
-          <h3 class="category">Kurse</h3>
+          <h3 class="category">Therapie</h3>
         </a>
       </div>
-      <div class="col-sm-4">
-        <a class="lightbox wrapper-portfolio" ng-href="../assets/images/roof-small.jpg">
+      <div class="col-md-4">
+        <a class="lightbox wrapper" ng-href="../assets/images/roof-small.jpg">
           <img class="img-responsive" src="../assets/images/roof-small.jpg" alt="portfolio-3">
           <h3 class="category">Bilder</h3>
         </a>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -54,16 +51,18 @@
 <!-- NEWS -->
 <!-- ================================================ -->
 
-<div class="bg-news" id="news">
+<div class="news" id="news">
   <div class="container">
-    <div class="row">
+    <div class="page-header">
       <h1 class="text-center">NEUIGKEITEN</h1>
-      <div class="col-sm-12">
-        <div class="news-post" ng-repeat="post in posts | limitTo:numPosts">
-          <div class="news-post-header">
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="post" ng-repeat="post in posts | limitTo:numPosts">
+          <div class="post-header">
             <span class="panel-title"> {{ post.title }}</span> <span class="pull-right"> {{ post.date | date:'dd.MM.yyyy' }}</span>
           </div>
-          <div class="news-post-body">
+          <div class="post-body">
             <pre>{{ post.body }}</pre>
           </div>
         </div>
@@ -72,28 +71,33 @@
   </div>
 </div>
 
-</div>
-
 
 <!-- KONZEPT -->
 <!-- ================================================ -->
-<div class="bg-concept" id="concept">
-  <div class="layer-concept">
-    <div class="container">
-      <div class="row">
-        <h1 class="text-center">KONZEPT</h1>
-        <div class="col-lg-5">
-          <p class="text-center concept-quote">Ich sehe den Mensch als ein Ganzes, eine Einheit.<br>
-            Sie werden nicht auf Ihre Krankheitssymptome reduziert, sondern erhalten eine ausführliche Beratung mit unterschiedlichen Therapievorschlägen.
-            Mein Ziel ist es ihre Gesundheit wieder herzustellen und dauerhaft zu erhalten.</p>
-        </div>
-        <div class="col-lg-5">
-          <img class="img-concept" src="../assets/images/florence.jpg" alt="Kathedrale Florenz">
-        </div>
-      </div>
+
+<div class="concept" id="concept">
+  <div class="row">
+    <div class="one col-md-8">
+      <p class="text-center">Ich sehe den Mensch als ein Ganzes, eine Einheit.<br>
+        Sie werden nicht auf Ihre Krankheitssymptome reduziert, sondern erhalten eine ausführliche Beratung mit unterschiedlichen Therapievorschlägen.
+        Mein Ziel ist es ihre Gesundheit wieder herzustellen und dauerhaft zu erhalten.</p>
+    </div>
+    <div class="florence col-md-4"></div>
+  </div>
+  <div class="row">
+    <div class="florence col-md-4"></div>
+    <div class="two col-md-8">
+      <p class="text-center">HALLO KONZEPT 2!</p>
     </div>
   </div>
+  <div class="row">
+    <div class="three col-md-8">
+      <p class="text-center">KONzEPT Drei!.</p>
+    </div>
+    <div class="florence col-md-4"></div>
+  </div>
 </div>
+
 
 <!-- THERAPIE -->
 <!-- ================================================ -->

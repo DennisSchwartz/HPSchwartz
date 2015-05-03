@@ -1,0 +1,87 @@
+/// HPSchwartz constants and variable defs
+/// Dennis Schwartz April 2015
+/// Adapted from
+///	Spectral by HTML5 UP
+///	html5up.net | @n33co
+
+
+
+// Misc.
+$misc: (
+  max-spotlights:		10,
+  max-features:		10,
+  z-index-base:		10000
+);
+
+// Breakpoints.
+$breakpoints: (
+  xlarge:				'(max-width: 1680px)',
+  large:				'(max-width: 1280px)',
+  medium:				'(max-width: 980px)',
+  small:				'(max-width: 736px)',
+  xsmall:				'(max-width: 480px)'
+);
+
+// Duration.
+$duration: (
+  transitions:		0.2s,
+  menu:				0.5s,
+  fadein:				3s
+);
+
+// Size.
+$size: (
+  element-height:		2.75em,
+  element-margin:		2em,
+  letter-spacing:		0.075em,
+  letter-spacing-alt:	0.225em
+);
+
+// Font.
+$font: (
+  family:				('Open Sans', Helvetica, sans-serif),
+  family-fixed:		('Courier New', monospace),
+  weight:				400,
+  weight-bold:		600,
+  weight-extrabold:	800
+);
+
+
+// Color Palette
+$palette_o: (
+  fg: #fff,
+  fg-light: #E5E5E5,
+  primary: rgba(152,192,154,.6),
+  primary-light: rgba(182, 222, 184, 0.4),
+  primary-solid: rgb(152,192,154),
+  secondary: rgba(231,231,231,.6),
+  secondary-solid: rgb(231,231,231),
+  text-strong: #333333,
+  shadow: rgba(0, 0, 0, 0.1)
+);
+
+
+$palette: (
+  fg: #fff,
+  fg-light: #E5E5E5,
+  primary: rgba(152,192,155,1),
+  primary-layer: rgba(152,192,155,0.6),
+  primary-vl: rgba(231,239,232,1),
+  primary-l: rgba(194,217,195,1),
+  primary-s: rgba(109,164,112,1),
+  primary-vs: rgba( 71,137, 75,1),
+  secondary: rgba(117,146,147,1),
+  secondary-layer: rgba(117,146,147,0.6),
+  secondary-vl: rgba(218,225,225,1),
+  secondary-l: rgba(165,183,184,1),
+  secondary-s: rgba( 84,124,126,1),
+  secondary-s-layer: rgba( 84,124,126,0.6),
+  secondary-vs: rgba( 55,103,106,1),
+  tertiary: rgba(211,227,180,1),
+  tertiary-vl: rgba(247,250,242,1),
+  tertiary-l: rgba(234,243,217,1),
+  tertiary-s: rgba(171,194,129,1),
+  tertiary-vs: rgba(135,163, 84,1),
+  text-strong: #333333,
+  shadow: rgba(0, 0, 0, 0.1)
+)

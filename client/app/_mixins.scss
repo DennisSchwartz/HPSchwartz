@@ -1,4 +1,8 @@
-
+// SCSS Mixins HPSchwartz
+// Dennis Schwartz 2015
+// With inspiration from:
+///	Spectral by HTML5 UP
+///	html5up.net | @n33co
 
 // Vendorization
 // Prefixes
@@ -19,5 +23,65 @@ $vendor-properties: (
   'border-radius',
   'animation-fill-mode',
   'animation-duration',
-  'animation-name'
+  'animation-name',
+  'border-radius',
+  'border-radius-top-left',
+  'border-radius-top-right'
 );
+
+/// Values that should be vendorized.
+/// @var {list}
+$vendor-values: (
+  'flex',
+  'linear-gradient',
+  'radial-gradient',
+  'transform'
+);
+
+
+
+
+
+
+/// Vendorizes a declaration's property and/or value(s).
+/// @param {string} $property Property.
+/// @param {mixed} $value String/list of value(s).
+@mixin vendor($property, $value) {
+
+  // Determine if property should expand.
+  $expandProperty: index($vendor-properties, $property);
+
+  // Determine if value should expand (and if so, add '-prefix-' placeholder).
+  $expandValue: false;
+
+  @each $x in $value {
+    @each $y in $vendor-values {
+      @if $y == str-slice($x, 1, str-length($y)) {
+
+        $value: set-nth($value, index($value, $x), '-prefix-' + $x);
+        $expandValue: true;
+
+      }
+    }
+  }
+
+  // Expand property?
+  @if $expandProperty {
+    @each $vendor in $vendor-prefixes {
+      #{$vendor}#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+    }
+  }
+
+    // Expand just the value?
+  @elseif $expandValue {
+    @each $vendor in $vendor-prefixes {
+      #{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+    }
+  }
+
+    // Neither? Treat them as a normal declaration.
+  @else {
+    #{$property}: #{$value};
+  }
+
+}

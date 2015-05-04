@@ -12,7 +12,7 @@
           <h1 class="text-center">WILLKOMMEN</h1>
           <h2 class="text-center"> Naturheilpraxis Gabriele Schwartz </h2>
           <!-- Horizontale Trennline Adresse -->
-          <div class="hline center-block"/>
+          <div class="hline center-block"></div>
           <p class="text-center">Wingertweg 83 75228 Ispringen +49 7231 800126</p>
         </div>
       </div>
@@ -23,71 +23,62 @@
 <!-- PORTFOLIO-->
 <!--===============================================================-->
 <div class="portfolio" id="praxis">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 margin-bottom-xs">
-        <a class="lightbox wrapper" href="#concept">
-          <img class="img-responsive" src="../assets/images/Blume-small.jpg" alt="portfolio-1">
-          <h3 class="category">Konzepte</h3>
-        </a>
-      </div>
-      <div class="col-md-4 margin-bottom-xs">
-        <a class="lightbox wrapper" href="../assets/images/globuli.jpg">
-          <img class="img-responsive" src="../assets/images/globuli.jpg" alt="portfolio-2">
-          <h3 class="category">Therapie</h3>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a class="lightbox wrapper" ng-href="../assets/images/roof-small.jpg">
-          <img class="img-responsive" src="../assets/images/roof-small.jpg" alt="portfolio-3">
-          <h3 class="category">Bilder</h3>
-        </a>
-      </div>
-    </div>
+  <div class="row">
+    <h2 class="text-center">Übersicht</h2>
+    <div class="hline center-block"></div>
+    <h4 class="text-center">Lernen Sie uns näher kennen:</h4>
   </div>
-</div>
-
-
-<!-- NEWS -->
-<!-- ================================================ -->
-
-<div class="news" id="news">
-  <div class="container">
-    <div class="page-header">
-      <h1 class="text-center">NEUIGKEITEN</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <!-- <h3 class="category">Konzepte</h3> -->
+      <img class="thumbnail" src="../assets/images/Blume-wide.png"/>
+      <h3>Der Mensch als Ganzes.</h3>
+      <p>Erhalten Sie ausführliche Beratung mit unterschiedlichen Therapievorschlägen,
+      besonders geeignet bei chronischen Erkrankungen</p>
+      <br>
+      <a href="#concept" class="btn btn-default">Mehr</a>
     </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="post" ng-repeat="post in posts | limitTo:numPosts">
-          <div class="post-header">
-            <span class="panel-title"> {{ post.title }}</span> <span class="pull-right"> {{ post.date | date:'dd.MM.yyyy' }}</span>
-          </div>
-          <div class="post-body">
-            <pre>{{ post.body }}</pre>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-4">
+      <img class="thumbnail" src="../assets/images/globuli-wide.png"/>
+      <h3>Lebenslanges Lernen.</h3>
+      <p>Fortbildungen für erfahrene Therapeuten und Anfänger.
+        Lernen Sie die miasmatische Homöopathie nach Peter Gienow kennen.</p>
+      <br>
+      <a href="#concept" class="btn btn-default">Mehr</a>
+    </div>
+    <div class="col-md-4">
+      <img class="thumbnail" src="../assets/images/sea-wide.png"/>
+      <h3>Offen für Jedermann.</h3>
+      <p>Erfahren Sie mehr über die Praxis. <br> Werfen Sie einen Blick auf unsere Galerie und Preisliste.</p>
+      <br>
+      <a href="#concept" class="btn btn-default">Mehr</a>
     </div>
   </div>
 </div>
 
 
 <!-- KONZEPT -->
-<!-- ================================================ -->
+<!-- ================================================
 
 <div class="concept" id="concept">
   <div class="row">
     <div class="one col-md-8">
-      <p class="text-center">Ich sehe den Mensch als ein Ganzes, eine Einheit.<br>
+      <h3 class="concept-quote">Ich sehe den Mensch als ein Ganzes, eine Einheit.<br>
         Sie werden nicht auf Ihre Krankheitssymptome reduziert, sondern erhalten eine ausführliche Beratung mit unterschiedlichen Therapievorschlägen.
-        Mein Ziel ist es ihre Gesundheit wieder herzustellen und dauerhaft zu erhalten.</p>
+        Mein Ziel ist es ihre Gesundheit wieder herzustellen und dauerhaft zu erhalten.
+      </h3>
     </div>
-    <div class="florence col-md-4"></div>
+    <div class="one col-md-4">
+      <img class="thumbnail" src="../assets/images/sheperd-small.jpeg">
+    </div>
   </div>
   <div class="row">
-    <div class="florence col-md-4"></div>
+    <div class="two col-md-4">
+      <span class="helper"></span><img class="thumbnail" src="../assets/images/lotus-small.jpeg">
+    </div>
     <div class="two col-md-8">
-      <p class="text-center">HALLO KONZEPT 2!</p>
+      <h3 class="concept-quote">Dazu kombiniere ich die miasmatische Homöopathie <br>
+        mit Orthomolekularer Medizin (OM), Säure-Basen-Therapie, Schüßler Salzen, Bach Blütentherapie und Phytotherapie.</h3>
     </div>
   </div>
   <div class="row">
@@ -95,6 +86,32 @@
       <p class="text-center">KONzEPT Drei!.</p>
     </div>
     <div class="florence col-md-4"></div>
+  </div>
+</div>
+
+<!-- NEWS -->
+<!-- ================================================
+
+<div class="news-and-dir" id="news-dir">
+  <div class="row">
+    <div class="news col-md-6">
+      <div class="row">
+        <h2>Neuigkeiten</h2>
+      </div>
+      <div class="row">
+        <div class="post" ng-repeat="post in posts | limitTo:numPosts | orderBy: date">
+          <!-- <div class="post-header">
+             <span class="panel-title"> {{ post.title }}</span> <span class="pull-right"> {{ post.date | date:'dd.MM.yyyy' }}</span>
+           </div>
+          <div class="post-body">
+            <h3>{{ post.date | date:'dd.MM.yyyy' }}</h3>
+            <p>{{ post.body }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="directions col-md-6">
+    </div>
   </div>
 </div>
 

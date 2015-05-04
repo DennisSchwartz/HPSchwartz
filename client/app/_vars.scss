@@ -41,7 +41,7 @@ $size: (
 $font: (
   family:				('Open Sans', Helvetica, sans-serif),
   family-fixed:		('Courier New', monospace),
-  weight:				400,
+  weight:				300,
   weight-bold:		600,
   weight-extrabold:	800
 );
@@ -64,6 +64,7 @@ $palette_o: (
 $palette: (
   fg: #fff,
   fg-light: #E5E5E5,
+  fg-medium: #666,
   primary: rgba(152,192,155,1),
   primary-layer: rgba(152,192,155,0.6),
   primary-vl: rgba(231,239,232,1),

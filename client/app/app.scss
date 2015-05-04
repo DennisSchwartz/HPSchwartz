@@ -6,7 +6,7 @@
 @import "vars";
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 @import "font-awesome/scss/font-awesome";
-//@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,800,800italic');
 
 
 /* Body */
@@ -14,10 +14,10 @@
 body {
   padding-top: 0;
   font-family: _font(family);
-  font-size: 15pt;
+  font-size: 12pt;
   font-weight: _font(weight);
   letter-spacing: _size(letter-spacing);
-  line-height: 1.65em;
+  line-height: 1.25em;
 
   background: _palette(bg);
 
@@ -33,7 +33,7 @@ body {
 /* APP-WIDE */
 
 h1 {
-  color: _palette(text-strong);
+  color: _palette(fg-medium);
   margin: 0 auto;
   padding-top: 100px;
   text-transform: uppercase;
@@ -93,7 +93,6 @@ h1 {
     @include vendor('animation-delay', '0.5s');
   }
 
-
   .hline {
     width: 300px;
     height: 1px;
@@ -121,95 +120,123 @@ h1 {
 /* PORTFOLIO */
 .portfolio {
 
-  .wrapper {
-    border-radius: 10px;
-    margin: 0 auto;
-    position: relative;
-    display: block;
-    background-color: _palette(primary);
-    max-width: 320px;
-    @include vendor('box-shadow', '6px 6px 0 0' + _palette(shadow));
-    @include vendor('transition', 'background-color' '200ms');
+  color: _palette(fg-medium);
+  text-align: center;
 
-    .img-responsive {
-      border-radius: inherit;
-      @include vendor('transition', 'opacity' '100ms' 'linear');
-    }
-
-    .category {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      text-align: center;
-      margin: 0 auto;
-      color: _palette(fg-light);
-      line-height: 0;
-      font-size: 35px;
-      @include vendor('transition', 'all' '200ms');
-    }
-
-    &:hover {
-      background-color: _palette(primary);
-
-      .img-responsive {
-        opacity: 0.2;
-        /* IE 8 OPACITY*/
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
-      }
-
-      .category {
-        //font-size: 35px;
-        color: _palette(fg);
-
-      }
-
-    }
+  h3 {
+    text-align: center;
   }
-
-}
-
-
-/* NEWS */
-
-.news {
-  background-color: _palette(primary-l);
-  @include vendor('background-size', 'cover');
 
   .row {
-    padding-top: 10px;
+    margin: 0;
+    padding: 40px;
+
+    &:last-child {
+      padding-bottom: 120px;
+    }
+  }
+
+  .hline {
+    width: 100px;
+    height: 1px;
+    margin-bottom: 10px;
+    background-color: _palette(fg-medium);
+    position: relative;
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .thumbnail {
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+
+}
+
+/* NEWS AND DIRECTIONS BLOCK */
+
+.news-and-dir {
+  .row {
+    padding: 0;
+    margin: 0;
   }
 
 
+  /* NEWS */
 
-  .post {
-    margin-bottom: 20px;
-    background-color: _palette(fg-light);
-    border: 1px solid transparent;
-    border-radius: 10px;
-    @include vendor('box-shadow', '0 3px 3px ' + _palette(shadow));
+  .news {
+    height: 50vh;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    background-color: _palette(primary-l);
+    @include vendor('background-size', 'cover');
 
-    .post-header {
-      padding: 10px 15px;
-      top: 20%;
-      background-color: _palette(shadow);
-      border-bottom: 1px solid;
-      border-color: #000000;
-      border-radius: inherit;
-      //@include vendor('border-radius-top-left', '10px');
-      //@include vendor('border-radius-top-right', '10px');
+    h2 {
+      position: relative;
+      text-align: center;
 
-      .panel-title > a {
-        color: inherit;
+    }
+
+
+
+    .post {
+      border-top: solid 5px _palette('primary-s');
+      margin-bottom: 2.25em;
+      padding-top: 2.25em;
+
+
+      &:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .post-header {
+        padding: 10px 15px;
+        top: 20%;
+        background-color: _palette(shadow);
+        border-bottom: 1px solid;
+        border-color: #000000;
+        //@include vendor('border-radius-top-left', '10px');
+        //@include vendor('border-radius-top-right', '10px');
+
+        .panel-title > a {
+          color: inherit;
+        }
+      }
+
+      .post-body {
+        //display: inline-block;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+
+        > :last-child {
+          margin-bottom: 0;
+        }
       }
     }
-
-    .post-body {
-      padding: 15px;
-    }
   }
+
+
+  /* DIRECTIONS */
+
+  .directions {
+
+    height: 50vh;
+    background-color: _palette('secondary-l');
+    padding: 0;
+    margin: 0;
+
+  }
+
+
 }
+
 
 
 /* CONCEPT */
@@ -221,31 +248,46 @@ h1 {
     margin: 0;
   }
 
+  .concept-quote {
+    text-align: left;
+    margin: 50px;
+    position: absolute;
+    top: 30%;
+  }
+
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
   .one {
-    background-color: rgba(234,241,241, 0.6);
+    background-color: rgba(109, 164, 113, 0.6);
     height: 400px;
     @include vendor('background-size', '100%' ' auto');
+
   }
 
   .two {
-    background-color: rgba(234,241,241, 0.8);
+    background-color: rgb(194, 217, 196);
     height: 400px;
     @include vendor('background-size', '100%' ' auto');
   }
 
   .three {
-    background-color: rgba(234,241,241, 1);
+    background-color: rgb(152, 192, 155);
     height: 400px;
     @include vendor('background-size', '100%' ' auto');
   }
 
-  .florence {
-    background-image: url("../assets/images/florence-square.png");
-    background-repeat: no-repeat;
-    @include vendor('background-size', '100%' 'auto');
-    height: 400px;
-    margin: 0;
+  .thumbnail {
+    border: 0 none;
+    box-shadow: none;
     padding: 0;
+    border-radius: 10px;
+    max-width: 80%;
+    position: absolute;
+    top: 20%;
   }
 
 }

@@ -9,8 +9,11 @@ angular.module('hpsApp')
       'title': 'News',
       'link': '#news'
     }, {
+      'title': 'Übersicht',
+      'link': '#portfolio'
+    }, {
       'title': 'Praxis',
-      'link': '#praxis'
+      'link': '#concept'
     }];
 
     $scope.isCollapsed = true;

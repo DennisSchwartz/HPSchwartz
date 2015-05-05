@@ -22,7 +22,7 @@
 
 <!-- PORTFOLIO-->
 <!--===============================================================-->
-<div class="portfolio" id="praxis">
+<div class="portfolio" id="portfolio">
   <div class="row">
     <h2 class="text-center">Übersicht</h2>
     <div class="hline center-block"></div>
@@ -34,9 +34,9 @@
       <img class="thumbnail" src="../assets/images/Blume-wide.png"/>
       <h3>Der Mensch als Ganzes.</h3>
       <p>Erhalten Sie ausführliche Beratung mit unterschiedlichen Therapievorschlägen,
-      besonders geeignet bei chronischen Erkrankungen</p>
+        besonders geeignet bei chronischen Erkrankungen</p>
       <br>
-      <a href="#" class="btn btn-default">Mehr</a>
+      <a href="#concept" class="btn btn-default">Mehr</a>
     </div>
     <div class="col-md-4">
       <img class="thumbnail" src="../assets/images/globuli-wide.png"/>
@@ -44,50 +44,68 @@
       <p>Fortbildungen für erfahrene Therapeuten und Anfänger.
         Lernen Sie die miasmatische Homöopathie nach Peter Gienow kennen.</p>
       <br>
-      <a href="#" class="btn btn-default">Mehr</a>
+      <a href="#concept" class="btn btn-default">Mehr</a>
     </div>
     <div class="col-md-4">
       <img class="thumbnail" src="../assets/images/sea-wide.png"/>
       <h3>Offen für Jedermann.</h3>
       <p>Erfahren Sie mehr über die Praxis. <br> Werfen Sie einen Blick auf unsere Galerie und Preisliste.</p>
       <br>
-      <a href="#" class="btn btn-default">Mehr</a>
+      <a href="#concept" class="btn btn-default">Mehr</a>
     </div>
   </div>
 </div>
 
 
 <!-- KONZEPT -->
-<!-- ================================================
+<!-- ================================================ -->
+
 
 <div class="concept" id="concept">
-  <div class="row">
-    <div class="one col-md-8">
-      <h3 class="concept-quote">Ich sehe den Mensch als ein Ganzes, eine Einheit.<br>
-        Sie werden nicht auf Ihre Krankheitssymptome reduziert, sondern erhalten eine ausführliche Beratung mit unterschiedlichen Therapievorschlägen.
-        Mein Ziel ist es ihre Gesundheit wieder herzustellen und dauerhaft zu erhalten.
-      </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 no-padding">
+        <div class="content right">
+          <p>Ich sehe den Mensch als ein Ganzes, eine Einheit.<br>
+            Sie werden nicht auf Ihre Krankheitssymptome reduziert, sondern erhalten eine ausführliche Beratung mit unterschiedlichen Therapievorschlägen.
+            Mein Ziel ist es ihre Gesundheit wieder herzustellen und dauerhaft zu erhalten.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 no-padding">
+        <div class="right">
+          <img class="img-responsive" src="../assets/images/lotus-small.jpeg" />
+        </div>
+      </div>
     </div>
-    <div class="one col-md-4">
-      <img class="thumbnail" src="../assets/images/sheperd-small.jpeg">
+    <div class="row">
+      <div class="col-md-6 no-padding">
+        <div class="left">
+          <img class="img-responsive" src="../assets/images/sheperd-small.jpeg" />
+        </div>
+      </div>
+      <div class="col-md-6 no-padding">
+        <div class="content left">
+          <p>Die Homöopathie betrachtet den Menschen als Einheit von Körper, Geist und Seele. <br>
+            So erfährt der Patient duch die Therapie auf allen drei Ebenen eine Steigerung des Wohlbefindens.</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="two col-md-4">
-      <span class="helper"></span><img class="thumbnail" src="../assets/images/lotus-small.jpeg">
+    <div class="row">
+      <div class="col-md-6 no-padding">
+        <div class="content right">
+          <p>Jeder Patient wir als individuelle Persönlichkeit behandelt und bekommt ein Arzneimittel das exakt auf ihn abgestimmt ist.</p>
+        </div>
+      </div>
+      <div class="col-md-6 no-padding">
+        <div class="right">
+          <img src="../assets/images/beach-small.jpg" class="img-responsive" />
+        </div>
+      </div>
     </div>
-    <div class="two col-md-8">
-      <h3 class="concept-quote">Dazu kombiniere ich die miasmatische Homöopathie <br>
-        mit Orthomolekularer Medizin (OM), Säure-Basen-Therapie, Schüßler Salzen, Bach Blütentherapie und Phytotherapie.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="three col-md-8">
-      <p class="text-center">KONzEPT Drei!.</p>
-    </div>
-    <div class="florence col-md-4"></div>
   </div>
 </div>
+
 
 <!-- NEWS -->
 <!-- ================================================
@@ -133,41 +151,10 @@
 
 <!-- IMPRESSUM -->
 <!-- ================================================ -->
-
-
-<!--<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="post in posts">
-        <li><a href="#" tooltip="{{post.date}}">{{post.title}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
-</div> -->
-
 <footer class="footer">
   <div class="container">
     <p>Naturheilpraxis Gabriele Schwartz 2015 | Dennis Schwartz Webdesign |
       <a href="http://github.com/DennisSchwartz">GitHub</a> |
-      <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Contact</a></p>
+      <a href="mailto:schwartz_dennis@web.de">Contact</a></p>
   </div>
 </footer>

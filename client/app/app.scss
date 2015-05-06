@@ -4,8 +4,7 @@
 @import "mixins";
 @import "vars";
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
-//@import "font-awesome/scss/font-awesome";
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,800,800italic');
+@import "../bower_components/font-awesome/scss/font-awesome";
 
 
 /* APP-WIDE */
@@ -154,7 +153,6 @@ body {
 }
 
 /* CONCEPT */
-
 .concept {
 
   background-color: _palette(tertiary);
@@ -254,92 +252,7 @@ body {
 
 }
 
-/* NEWS AND DIRECTIONS BLOCK */
-
-.news-and-dir {
-
-  .row {
-    padding: 0;
-    margin: 0;
-    height: 25em;
-  }
-
-
-  /* NEWS */
-
-  .news {
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x:hidden;
-    background-color: _palette(primary-l);
-    @include vendor('background-size', 'cover');
-
-    h2 {
-      position: relative;
-      text-align: center;
-
-    }
-
-    .row {
-      height: auto;
-    }
-
-
-    .post {
-      border-top: solid 5px _palette('primary-s');
-      margin-bottom: 2.25em;
-      padding-top: 2.25em;
-
-
-      &:first-child {
-        border-top: 0;
-        padding-top: 0;
-      }
-
-      .post-header {
-        padding: 10px 15px;
-        top: 20%;
-        background-color: _palette(shadow);
-        border-bottom: 1px solid;
-        border-color: #000000;
-        //@include vendor('border-radius-top-left', '10px');
-        //@include vendor('border-radius-top-right', '10px');
-
-        .panel-title > a {
-          color: inherit;
-        }
-      }
-
-      .post-body {
-        //display: inline-block;
-        vertical-align: middle;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-
-        > :last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-
-  /* DIRECTIONS */
-
-  .directions {
-    background-color: _palette('secondary-l');
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    border: 0;
-  }
-
-
-}
-
 /* NEWS */
-
 .news {
 
   border-bottom: solid 1px _palette(fg-medium);
@@ -375,7 +288,6 @@ body {
 }
 
 /* MAP */
-
 .map {
 
   background-color: _palette(primary-vl);
@@ -422,16 +334,117 @@ body {
 
 }
 
-/* FOOTER */
+/* COST */
+.cost {
 
+  border-bottom: solid 1px _palette(fg-medium);
+
+  .disclaimer {
+    display: none;
+  }
+
+  .row {
+    margin: 30px;
+    padding: 20px;
+  }
+
+  .table {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    overflow: auto;
+    @include vendor('box-shadow', '0 0 8px ' + _palette(shadow));
+
+    table {
+      width: 100%;
+    }
+
+    tbody {
+      tr {
+        border: solid 1px _palette(shadow);
+        border-left: 0;
+        border-right: 0;
+
+        &:nth-child(2n + 1) {
+          background-color: _palette(tertiary-l);
+        }
+      }
+    }
+
+    td {
+      padding: 0.75em 0.75em;
+      white-space: nowrap;
+    }
+
+    th {
+      color: _palette(fg-medium);
+      font-size: 0.9em;
+      font-weight: _font(weight-bold);
+      padding: 0 0.75em 0.75em 0.75em;
+      text-align: left;
+    }
+
+    thead {
+      //border-bottom: solid 2px _palette(shadow);
+    }
+
+    tfoot {
+      //border-top: solid 2px _palette(shadow);
+    }
+  }
+}
+
+/* IMPRESSUM */
+.impressum {
+
+  background-color: _palette(tertiary-l);
+
+  border-bottom: solid 1px _palette(fg-medium);
+  position: relative;
+  z-index: 1;
+  font-size: 10pt;
+
+  .row {
+    margin: 2em;
+    padding: 0;
+  }
+
+  .left {
+    text-align: right;
+
+    &:before {
+      background: _palette(fg-medium);
+      content: '';
+      height: 33%;
+      right: 0;
+      position: absolute;
+      top: 33%;
+      width: 1px;
+      z-index: 2;
+    }
+  }
+
+  @include icon;
+
+  address {
+    a {
+      color: _palette(fg-medium);
+      white-space: nowrap;
+    }
+  }
+
+}
+
+/* FOOTER */
 .footer {
   text-align: center;
-  padding: 30px 0;
-  border-top: 1px solid #E5E5E5;
+  font-size: 8pt;
+  padding: 15px 0;
+  //border-top: 1px solid _palette(fg-medium);
+  background-color: _palette(shadow);
 }
 
 /* EXPERIMENTS AREA */
-
 
 /* ANIMATION */
 

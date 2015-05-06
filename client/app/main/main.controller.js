@@ -1,7 +1,16 @@
 'use strict';
 
 angular.module('hpsApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, $document, socket) {
+
+
+    /*===================================================================================*/
+    /*	LIGHTBOX
+     /*===================================================================================*/
+    $document.ready(function() {
+      $('.lightbox').magnificPopup({type:'image'});
+    });
+
     $scope.posts = [];
     $scope.currentPost = [];
     $scope.numPosts = 2;

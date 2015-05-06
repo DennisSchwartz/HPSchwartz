@@ -8,6 +8,51 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,800,800italic');
 
 
+/* APP-WIDE */
+
+html {
+
+  h1 {
+    color: _palette(fg-medium);
+    margin: 0 auto;
+    padding-top: 100px;
+    text-transform: uppercase;
+    text-shadow: 0 0 3px _palette(shadow);
+    font-size: 54px;
+    line-height: 32px;
+    position: relative;
+  }
+
+  .row {
+    padding-top: 142px;
+    padding-bottom: 150px;
+  }
+
+  .no-padding {
+    padding: 0;
+    height: 100%;
+  }
+
+  .hline {
+    width: 100px;
+    height: 1px;
+    margin-bottom: 10px;
+    background-color: _palette(fg-medium);
+    position: relative;
+  }
+
+  /* NAVIGATION */
+  .navbar {
+    background-color: _palette(shadow);
+    border: none;
+
+    .nav a {
+      color: _palette(fg-medium);
+    }
+  }
+}
+
+
 /* Body */
 
 body {
@@ -28,34 +73,6 @@ body {
     }
   }
 
-}
-
-/* APP-WIDE */
-
-h1 {
-  color: _palette(fg-medium);
-  margin: 0 auto;
-  padding-top: 100px;
-  text-transform: uppercase;
-  text-shadow: 0 0 3px _palette(shadow);
-  font-size: 54px;
-  line-height: 32px;
-  position: relative;
-}
-
-.row {
-  padding-top: 142px;
-  padding-bottom: 150px;
-}
-
-
-/* NAVIGATION */
-.navbar {
-  background-color: _palette(shadow);
-  border: none;
-  a {
-    color: #FFF;
-  }
 }
 
 
@@ -95,32 +112,10 @@ h1 {
 
   .hline {
     width: 300px;
-    height: 1px;
-    margin-bottom: 10px;
     background-color: _palette(fg);
-    position: relative;
   }
 
 }
-
-@media (max-width:767px) {
-
-  .intro h1 {
-    font-size: 26px;
-    line-height: 32px;
-  }
-
-  .intro .row {
-    padding-top: 105px;
-    padding-bottom: 65px;
-  }
-
-  .concept-two:before {
-      visibility: hidden;
-  }
-
-}
-
 
 /* PORTFOLIO */
 .portfolio {
@@ -140,14 +135,6 @@ h1 {
     }
   }
 
-  .hline {
-    width: 100px;
-    height: 1px;
-    margin-bottom: 10px;
-    background-color: _palette(fg-medium);
-    position: relative;
-  }
-
   img {
     margin-left: auto;
     margin-right: auto;
@@ -165,88 +152,6 @@ h1 {
 
 
 }
-
-/* NEWS AND DIRECTIONS BLOCK */
-
-.news-and-dir {
-  .row {
-    padding: 0;
-    margin: 0;
-  }
-
-
-  /* NEWS */
-
-  .news {
-    height: 50vh;
-    overflow-y: scroll;
-    overflow-x:hidden;
-    background-color: _palette(primary-l);
-    @include vendor('background-size', 'cover');
-
-    h2 {
-      position: relative;
-      text-align: center;
-
-    }
-
-
-
-    .post {
-      border-top: solid 5px _palette('primary-s');
-      margin-bottom: 2.25em;
-      padding-top: 2.25em;
-
-
-      &:first-child {
-        border-top: 0;
-        padding-top: 0;
-      }
-
-      .post-header {
-        padding: 10px 15px;
-        top: 20%;
-        background-color: _palette(shadow);
-        border-bottom: 1px solid;
-        border-color: #000000;
-        //@include vendor('border-radius-top-left', '10px');
-        //@include vendor('border-radius-top-right', '10px');
-
-        .panel-title > a {
-          color: inherit;
-        }
-      }
-
-      .post-body {
-        //display: inline-block;
-        vertical-align: middle;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-
-        > :last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-
-  /* DIRECTIONS */
-
-  .directions {
-
-    height: 50vh;
-    background-color: _palette('secondary-l');
-    padding: 0;
-    margin: 0;
-
-  }
-
-
-}
-
-
 
 /* CONCEPT */
 
@@ -347,13 +252,175 @@ h1 {
     }
   }
 
-  .no-padding {
-    padding: 0;
-    height: 100%;
-  }
 }
 
-/* EXPERIMENTS AREA */
+/* NEWS AND DIRECTIONS BLOCK */
+
+.news-and-dir {
+
+  .row {
+    padding: 0;
+    margin: 0;
+    height: 25em;
+  }
+
+
+  /* NEWS */
+
+  .news {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    background-color: _palette(primary-l);
+    @include vendor('background-size', 'cover');
+
+    h2 {
+      position: relative;
+      text-align: center;
+
+    }
+
+    .row {
+      height: auto;
+    }
+
+
+    .post {
+      border-top: solid 5px _palette('primary-s');
+      margin-bottom: 2.25em;
+      padding-top: 2.25em;
+
+
+      &:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .post-header {
+        padding: 10px 15px;
+        top: 20%;
+        background-color: _palette(shadow);
+        border-bottom: 1px solid;
+        border-color: #000000;
+        //@include vendor('border-radius-top-left', '10px');
+        //@include vendor('border-radius-top-right', '10px');
+
+        .panel-title > a {
+          color: inherit;
+        }
+      }
+
+      .post-body {
+        //display: inline-block;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+
+        > :last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+  /* DIRECTIONS */
+
+  .directions {
+    background-color: _palette('secondary-l');
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: 0;
+  }
+
+
+}
+
+/* NEWS */
+
+.news {
+
+  border-bottom: solid 1px _palette(fg-medium);
+
+  .row {
+    margin: 0;
+    margin-top: 40px;
+    padding: 15px;
+
+    &:last-child {
+      padding-bottom: 120px;
+    }
+  }
+
+  .posts {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: solid 1px _palette(shadow);
+    margin-bottom: 3em;
+    @include vendor('box-shadow', '0 0 8px ' + _palette(shadow));
+  }
+
+  .post {
+    margin: 10px;
+    padding: 10px;
+
+    //border: solid 1px _palette(shadow);
+    .post-header {
+      border-bottom: solid 1px _palette(shadow);
+    }
+  }
+
+}
+
+/* MAP */
+
+.map {
+
+  background-color: _palette(primary-vl);
+  border-bottom: solid 1px _palette(fg-medium);
+
+  .container {
+    height: 100%;
+  }
+
+  .row {
+    padding: 0;
+    margin-bottom: 20px;
+
+    &:first-child {
+      padding-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+
+  .shadowed {
+    @include vendor('box-shadow', '0 0 8px ' + _palette(shadow));
+  }
+
+  .embedded {
+    height: 28em;
+    padding-top: inherit;
+  }
+
+  .address {
+
+    height: 28em;
+
+    .test {
+      align-content: center;
+      text-align: center;
+      position: relative;
+      top: 10%;
+    }
+
+  }
+
+}
 
 /* FOOTER */
 
@@ -362,6 +429,9 @@ h1 {
   padding: 30px 0;
   border-top: 1px solid #E5E5E5;
 }
+
+/* EXPERIMENTS AREA */
+
 
 /* ANIMATION */
 
@@ -404,4 +474,27 @@ h1 {
   100% {
     top:0;
   }
+}
+
+@media (max-width:767px) {
+
+  .intro h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .intro .row {
+    padding-top: 105px;
+    padding-bottom: 65px;
+  }
+
+  .concept:before {
+    visibility: hidden;
+  }
+
+  .navbar-brand {
+    visibility: hidden;
+    font-size: 1px;
+  }
+
 }

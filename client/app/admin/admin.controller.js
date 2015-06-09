@@ -1,17 +1,47 @@
 'use strict';
 
 angular.module('hpsApp')
-  .controller('AdminCtrl', function ($scope, $http, Auth, User) {
+  .controller('AdminCtrl', function ($scope, $http, socket, User) {
+    $scope.posts = [];
+    $scope.currentPost = {};
+    $scope.post = {};
+    $scope.numPosts = 2;
 
-    // Use the User $resource to fetch all users
-    $scope.users = User.query();
-
-    $scope.delete = function(user) {
-      User.remove({ id: user._id });
-      angular.forEach($scope.users, function(u, i) {
-        if (u === user) {
-          $scope.users.splice(i, 1);
-        }
-      });
+    var defaultPost = {
+      title : "",
+      body : "",
+      date: ""
     };
+
+    $scope.clearForm = function() {
+      $scope.form.$setPristine();
+      $scope.post = defaultPost;
+    };
+
+    $http.get('/api/posts').success(function(posts) {
+      $scope.posts = posts;
+      $scope.currentPost = posts[0];
+      socket.syncUpdates('post', $scope.posts);
+    });
+
+    $scope.newPost = function(form) {
+      if (form.$valid) {
+        $scope.post.date = new Date();
+        $http.post('/api/posts', $scope.post).success(function() {
+          $scope.clearForm();
+          console.log('Test!');
+          $scope.message = 'Successful posts!';
+          socket.syncUpdates('post', $scope.posts);
+        });
+      }
+    };
+
+    $scope.incNumPosts = function() {
+      $scope.numPosts += 5;
+    };
+
+    $scope.resetNumPosts = function() {
+      $scope.numPosts = 2;
+    };
+
   });

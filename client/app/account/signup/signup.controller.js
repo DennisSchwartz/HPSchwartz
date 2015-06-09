@@ -11,7 +11,7 @@ angular.module('hpsApp')
       if(form.$valid) {
         Auth.createUser({
           name: $scope.user.name,
-          email: $scope.user.email,
+          email: $scope.user.username,
           password: $scope.user.password
         })
         .then( function() {

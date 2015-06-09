@@ -3,8 +3,8 @@
 angular.module('hpsApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('login', {
-        url: '/login',
+      .state('login2', {
+        url: '/login2',
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginCtrl'
       })

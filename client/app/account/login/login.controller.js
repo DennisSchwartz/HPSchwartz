@@ -10,12 +10,12 @@ angular.module('hpsApp')
 
       if(form.$valid) {
         Auth.login({
-          email: $scope.user.email,
+          email: $scope.user.username,
           password: $scope.user.password
         })
         .then( function() {
-          // Logged in, redirect to home
-          $location.path('/');
+          // Logged in, redirect to admin
+          $location.path('/admin');
         })
         .catch( function(err) {
           $scope.errors.other = err.message;

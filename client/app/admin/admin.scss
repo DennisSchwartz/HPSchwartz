@@ -1,1 +1,65 @@
-.trash { color:rgb(209, 91, 71); }
+.header-bar {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 50px;
+  background-color: _palette(primary);
+  border-bottom: solid;
+  border-color: _palette(shadow);
+  border-width: 1px;
+
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.admin {
+
+
+  .container {
+    .row {
+      margin: 0;
+      margin-top: 40px;
+      padding: 15px;
+
+      &:first-child {
+        padding-top: 60px;
+      }
+
+      &:last-child {
+        padding-bottom: 120px;
+      }
+    }
+
+
+    .form-control {
+      margin: 15px;
+    }
+
+    .control-label {
+      margin: 10px;
+      margin-bottom: 0;
+    }
+  }
+
+  .news {
+    border-bottom: none;
+    margin-bottom: 30px;
+
+    .row {
+      &:last-child {
+        padding-bottom: 20px;
+      }
+    }
+
+    .pull-right {
+      margin-right: 20px;
+    }
+  }
+
+
+}
+

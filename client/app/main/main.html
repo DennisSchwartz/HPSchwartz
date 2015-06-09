@@ -74,14 +74,14 @@
       </div>
       <div class="col-md-6 no-padding">
         <div class="right">
-          <img class="img-responsive" src="../assets/images/lotus-small.jpeg" />
+          <img class="thumbnail" src="../assets/images/lotus-small.jpeg" />
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 no-padding">
         <div class="left">
-          <img class="img-responsive" src="../assets/images/sheperd-small.jpeg" />
+          <img class="thumbnail" src="../assets/images/sheperd-small.jpeg" />
         </div>
       </div>
       <div class="col-md-6 no-padding">
@@ -99,7 +99,7 @@
       </div>
       <div class="col-md-6 no-padding">
         <div class="right">
-          <img src="../assets/images/beach-small.jpg" class="img-responsive" />
+          <img src="../assets/images/beach-small.jpg" class="thumbnail" />
         </div>
       </div>
     </div>
@@ -117,12 +117,12 @@
       <h2 class="text-center">Neuigkeiten</h2>
     </div>
     <div class="row posts">
-      <div class="post" ng-repeat="post in posts | limitTo:numPosts | orderBy: date">
+      <div class="post" ng-repeat="post in posts | orderBy:'-date' | limitTo:numPosts">
         <div class="post-header">
-          <span class="panel-title"> {{ post.title }}</span> <span class="pull-right"> {{ post.date | date:'dd.MM.yyyy' }}</span>
+          <span class="panel-title"> <b>{{ post.title }}</b></span> <span class="pull-right"> {{ post.date | date:'dd.MM.yyyy' }}</span>
         </div>
         <div class="post-body">
-          <h3>{{ post.date | date:'dd.MM.yyyy' }}</h3>
+          <!--<h3>{{ post.title }}</h3>-->
           <p>{{ post.body }}</p>
         </div>
       </div>
@@ -195,7 +195,6 @@
           <img src="../assets/images/forest.jpg" class="thumbnail" />
         </a>
       </div>
-
     </div>
     <div class="row">
       <div class="col-md-4">

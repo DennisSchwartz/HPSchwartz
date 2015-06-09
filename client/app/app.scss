@@ -3,6 +3,8 @@
 @import "functions";
 @import "mixins";
 @import "vars";
+@import 'admin/admin.scss';
+@import "login/login.scss";
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 @import "../bower_components/font-awesome/scss/font-awesome";
 
@@ -167,8 +169,8 @@ body {
 /* CONCEPT */
 .concept {
 
-  background-color: _palette(tertiary);
-  vertical-align: baseline;
+  background-color: _palette(tertiary-l);
+  //vertical-align: baseline;
   margin: 0;
   position: relative;
   z-index: 1;
@@ -221,9 +223,14 @@ body {
     }
 
     p {
-      &:first-letter {
-        font-size: 24pt;
-      }
+      width: 100%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      //&:first-letter {
+      //  font-size: 24pt;
+      //}
     }
 
     :last-child {
@@ -240,11 +247,27 @@ body {
     position: absolute;
   }
 
+  .thumbnail {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;//$border-radius;
+    border: 0;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+
+    @include vendor('box-shadow', '0 0 8px ' + _palette(shadow));
+  }
+
   .right {
     text-align: right;
-    float: right;
     height: 100%;
     width: 100%;
+
+    .thumbnail {
+      float: right;
+      left: 0;
+    }
 
     .img-responsive {
       left: 0;
@@ -253,14 +276,15 @@ body {
 
   .left {
     text-align: left;
-    float: left;
+    //float: left;
     height: 100%;
     width: 100%;
 
-    .img-responsive {
+    .thumbnail {
+      float: left;
       right: 0;
     }
-  }
+    }
 
 }
 
@@ -290,10 +314,15 @@ body {
   .post {
     margin: 10px;
     padding: 10px;
+    //white-space: pre-wrap;
 
     //border: solid 1px _palette(shadow);
     .post-header {
       border-bottom: solid 1px _palette(shadow);
+    }
+
+    .post-body {
+      padding: 15px;
     }
   }
 
@@ -353,11 +382,12 @@ body {
   border-bottom: solid 1px _palette(fg-medium);
 
   .row {
-    margin: 30px;
+    margin: 0;
     padding: 0;
 
     &:first-child {
       margin-top: 50px;
+      margin-bottom: 20px;
     }
 
     &:last-child {
@@ -382,8 +412,9 @@ body {
     max-height: 300px;
     width: 100%;
     padding: 0;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
     border-radius: $border-radius;
     border: 0;
 
@@ -569,3 +600,4 @@ body {
   }
 
 }
+

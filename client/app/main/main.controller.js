@@ -36,4 +36,14 @@ angular.module('hpsApp')
     //$scope.$on('$destroy', function () {
     //  socket.unsyncUpdates('thing');
     //});
+
+    $scope.incNumPosts = function() {
+      $scope.numPosts += 5;
+    };
+
+    $scope.resetNumPosts = function() {
+      $scope.numPosts = 2;
+    };
+
+
   });

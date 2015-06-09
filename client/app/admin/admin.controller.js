@@ -7,6 +7,12 @@ angular.module('hpsApp')
     $scope.post = {};
     $scope.numPosts = 2;
 
+    $scope.tatoolbar = [
+      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'quote'],
+      ['bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol', 'redo', 'undo', 'clear'],
+      ['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent']
+    ];
+
     var defaultPost = {
       title : "",
       body : "",

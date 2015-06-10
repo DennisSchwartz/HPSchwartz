@@ -21,8 +21,10 @@ angular.module('hpsApp')
 
 
     $scope.incNumPosts = function () {
-      $("#concept").addClass('hide');
       $scope.numPosts += 2;
+      if ($scope.numPosts > scope.posts.length) {
+        $scope.numPosts = scope.posts.length;
+      }
     };
 
     $scope.resetNumPosts = function () {

@@ -6,14 +6,23 @@ angular.module('hpsApp')
       'title': 'Home',
       'link': '#home'
     }, {
-      'title': 'News',
-      'link': '#news'
-    }, {
       'title': 'Übersicht',
       'link': '#portfolio'
     }, {
       'title': 'Praxis',
       'link': '#concept'
+    }, {
+      'title': 'News',
+      'link': '#news'
+    }, {
+      'title': 'Anfahrt',
+      'link': '#map'
+    }, {
+      'title': 'Galerie',
+      'link': '#gallery'
+    }, {
+      'title': 'Kosten',
+      'link': '#cost'
     }];
 
     $scope.isCollapsed = true;

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hpsApp')
-  .controller('NewsCtrl', function ($scope, $http) {
+  .controller('NewsCtrl', function ($scope, $http, socket) {
 
     $scope.posts = [];
     $scope.numPosts = 2;
@@ -21,7 +21,8 @@ angular.module('hpsApp')
 
 
     $scope.incNumPosts = function () {
-      $scope.numPosts += 5;
+      $("#concept").addClass('hide');
+      $scope.numPosts += 2;
     };
 
     $scope.resetNumPosts = function () {
